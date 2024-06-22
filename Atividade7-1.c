@@ -2,6 +2,11 @@
 
 #define TamMaxString 50
 
+#ifdef TESTADOR
+  #define PRINTF(format, ...) fprintf(stderr, format, __VA_ARGS__)
+#else
+  #define PRINTF(format, ...) printf(format, __VA_ARGS__)
+#endif
 
 int main()
 {
