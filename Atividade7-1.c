@@ -7,7 +7,8 @@ int main()
 {
     char string[TamMaxString];
     int contagem = 0;
-    
+
+    printf("Digite a string(max 50 caracteres): "); 
     fgets(string, TamMaxString, stdin);
     
     for(int i = 0; i < TamMaxString; i++){
@@ -16,7 +17,7 @@ int main()
         }
     }
     printf("%s \n", string);
-    printf("%d", contagem);
+    PRINTF("%d", contagem);
     
     return 0;
 }
