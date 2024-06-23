@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 #define TamMaxString 50
 
@@ -15,6 +16,7 @@ int main()
 
     printf("Digite a string(max 50 caracteres): "); 
     fgets(string, TamMaxString, stdin);
+    string[strcspn(string, "\n")] = 0;
     
     for(int i = 0; i < TamMaxString; i++){
         if(string[i] == ' '){
